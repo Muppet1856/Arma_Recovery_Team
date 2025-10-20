@@ -6,7 +6,7 @@ file = "keys/RecoveryTeam.biprivatekey"
 
 [version]
 path = "mod.cpp"
-pattern = "version = \"{version}\";"
+pattern = "version = \"{major}.{minor}.{patch}\";"
 
 [hemtt.release]
 # Where the finished @mod will be placed
