@@ -16,7 +16,7 @@ jobs:
           mkdir -p keys
           echo "$BIPRIVATEKEY" | base64 -d > keys/MyModKey.biprivatekey
       - name: Build and Sign Mod
-        run: hemtt build --release
+        run: hemtt release
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
