@@ -1,9 +1,12 @@
 name = "RecoveryTeam"
 author = "You"
-version = "1.8.0"
 prefix = "rt_core"
 [signing]
 file = "keys/RecoveryTeam.biprivatekey"
+
+[version.file]
+path = "mod.cpp"
+pattern = "version = \"{version}\";"
 
 [hemtt.release]
 # Where the finished @mod will be placed
