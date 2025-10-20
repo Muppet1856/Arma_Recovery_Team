@@ -1,16 +1,24 @@
-name: Build Mod
-on: [push]
+name: Build and Sign Arma Mod
+on:
+  push:
+
 jobs:
-  build:
+  build-and-sign:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Install HEMTT
-        run: curl -s https://hemtt.dev/install.sh | bash
-      - name: Build PBO
-        run: hemtt build
+        uses: arma-actions/hemtt@v1
+      - name: Set Up Private Key
+        env:
+          BIPRIVATEKEY: ${{ secrets.BIPRIVATEKEY }}
+        run: |
+          mkdir -p keys
+          echo "$BIPRIVATEKEY" | base64 -d > keys/MyModKey.biprivatekey
+      - name: Build and Sign Mod
+        run: hemtt build --release
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: mod-pbo
+          name: mod-release
           path: '**/*.pbo'
