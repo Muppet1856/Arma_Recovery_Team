@@ -1,4 +1,4 @@
-# Recovery Team (Arma 3)
+# Recovery Team (Arma 3) 
 
 ![GitHub Release](https://img.shields.io/github/v/release/Muppet1856/Arma_Recovery_Team)
 
