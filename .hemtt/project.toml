@@ -4,7 +4,7 @@ prefix = "rt_core"
 [signing]
 file = "keys/RecoveryTeam.biprivatekey"
 
-[version.file]
+[version]
 path = "mod.cpp"
 pattern = "version = \"{version}\";"
 
