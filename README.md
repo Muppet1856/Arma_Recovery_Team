@@ -1,5 +1,4 @@
-# Recovery Team (Arma 3) — Full Source (v1.6.0)
-
+# Recovery Team (Arma 3)
 This is the full script source. Build `rt_core.pbo` with Arma 3 Tools → Addon Builder.
 - Source: `@RecoveryTeam\addons\rt_core`
 - Output: `@RecoveryTeam\addons`
