@@ -1,5 +1,10 @@
 # Recovery Team (Arma 3)
+
+[![GitHub Release](https://img.shields.io/github/v/release/BrettMayson/Arma_Recovery_Team?style=flat-square&label=Latest)](https://github.com/BrettMayson/Arma_Recovery_Team/releases)
+[![GitHub Downloads](https://img.shields.io/github/downloads/BrettMayson/Arma_Recovery_Team/total?style=flat-square&label=Downloads)](https://github.com/BrettMayson/Arma_Recovery_Team/releases)
+
 This is the full script source. Build `rt_core.pbo` with Arma 3 Tools → Addon Builder.
+- Keep `mod.cpp` and `addons/rt_core/config.cpp` in sync with the same version string when you bump it.
 - Source: `@RecoveryTeam\addons\rt_core`
 - Output: `@RecoveryTeam\addons`
 - Optional config: `@RecoveryTeam\userconfig\RT\RT_settings.sqf` (or root `userconfig\RT\RT_settings.sqf`)
