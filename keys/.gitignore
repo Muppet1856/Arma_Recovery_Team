@@ -1,0 +1,4 @@
+# Keep this directory to make it easy to drop the private key for HEMTT signing.
+# Ignore everything by default to avoid committing secrets.
+*
+!.gitignore

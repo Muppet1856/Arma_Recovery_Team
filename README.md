@@ -9,6 +9,7 @@ This is the full script source. Build `rt_core.pbo` with Arma 3 Tools → Addon 
 
 ## Signing (Optional but recommended)
 ### Windows
+- The repository includes an empty `@RecoveryTeam/keys/` directory so HEMTT can stage the `.bikey` without error. Keep your private key outside of version control (see below).
 - Run `make_pbo.bat`. If `keys\RecoveryTeam.biprivatekey` is missing, the script will create it using `DSCreateKey.exe`, sign the PBO with `DSSignFile.exe`, and copy the `.bikey` to `@RecoveryTeam\keys\`.
 
 ### Linux (Wine)
