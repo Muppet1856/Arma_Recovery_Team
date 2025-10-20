@@ -1,3 +1,5 @@
+#include "script_version.hpp"
+
 class CfgPatches
 {
   class rt_core
@@ -9,6 +11,7 @@ class CfgPatches
     units[] = {};
     weapons[] = {};
     version = "1.8.0";
+    versionAr[] = {MAJOR, MINOR, PATCHLVL};
   };
 };
 
