@@ -14,7 +14,7 @@ jobs:
           BIPRIVATEKEY: ${{ secrets.BIPRIVATEKEY }}
         run: |
           mkdir -p keys
-          echo "$BIPRIVATEKEY" | base64 -d > keys/MyModKey.biprivatekey
+          echo "$BIPRIVATEKEY" | base64 -d > keys/RecoveryTeam.biprivatekey
       - name: Build and Sign Mod
         run: hemtt release
       - name: Upload Artifact
