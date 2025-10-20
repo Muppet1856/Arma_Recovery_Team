@@ -2,8 +2,8 @@ name = "RecoveryTeam"
 author = "You"
 version = "1.8.0"
 prefix = "rt_core"
-signing = true
-private_key = "keys/RecoveryTeam.biprivatekey"
+[signing]
+file = "keys/RecoveryTeam.biprivatekey"
 
 [hemtt.release]
 # Where the finished @mod will be placed
