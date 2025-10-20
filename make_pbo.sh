@@ -29,6 +29,14 @@ KEY_NAME="${KEY_NAME:-RecoveryTeam}"               # The name for your key pair
 BIPRIVATE="$KEYS_DIR/${KEY_NAME}.biprivatekey"
 BIKEY="$KEYS_DIR/${KEY_NAME}.bikey"
 
+# Inject private key from CI if provided as base64
+if [[ -n "${BIPRIVATEKEY_BASE64:-}" || -n "${BIPRIVATEKEY:-}" ]]; then
+  echo "==> Writing private key from environment secret"
+  KEY_B64="${BIPRIVATEKEY_BASE64:-${BIPRIVATEKEY:-}}"
+  printf '%s' "$KEY_B64" | base64 -d >"$BIPRIVATE"
+  chmod 600 "$BIPRIVATE"
+fi
+
 echo "==> Building PBO via AddonBuilder under Wine"
 echo "    SRC:  $SRC_DIR"
 echo "    DEST: $DEST_DIR"

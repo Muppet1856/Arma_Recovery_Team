@@ -17,6 +17,7 @@ This is the full script source. Build `rt_core.pbo` with Arma 3 Tools → Addon 
   WINE_BIN=wine TOOLS_DIR="$HOME/.local/share/Steam/steamapps/common/Arma 3 Tools" ./make_pbo.sh
   ```
 - The script builds via AddonBuilder, creates a key if missing, signs via DSSignFile, and copies the `.bikey` into `@RecoveryTeam/keys/`.
+- In CI you can provide a base64-encoded private key via `$BIPRIVATEKEY_BASE64` (or `$BIPRIVATEKEY`) and the script will write it to `keys/RecoveryTeam.biprivatekey` before signing.
 
 > Keep your **.biprivatekey** secret. Distribute only the `.bikey` with your mod.
 
