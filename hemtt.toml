@@ -1,0 +1,24 @@
+name = "RecoveryTeam"
+author = "You"
+version = "1.8.0"
+prefix = "rt_core"
+signing = true
+private_key = "keys/RecoveryTeam.biprivatekey"
+
+[hemtt.release]
+# Where the finished @mod will be placed
+directory = "dist"
+
+[hemtt.options]
+# Extra files/folders to include in release
+include = [
+    "@RecoveryTeam/userconfig",
+    "@RecoveryTeam/keys",
+    "README.md",
+    "make_pbo.bat",
+    "make_pbo.sh"
+]
+
+[hemtt.pack]
+# PBOs to pack (from ./addons/*)
+# HEMTT automatically packs every folder in ./addons; ensure our source is here.

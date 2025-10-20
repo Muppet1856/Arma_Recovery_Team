@@ -1,2 +1,36 @@
-# Arma_Recovery__Team
-A utility for ArmA to deploy a vehicle recovery team
+# Recovery Team (Arma 3) — Full Source (v1.6.0)
+
+This is the full script source. Build `rt_core.pbo` with Arma 3 Tools → Addon Builder.
+- Source: `@RecoveryTeam\addons\rt_core`
+- Output: `@RecoveryTeam\addons`
+- Optional config: `@RecoveryTeam\userconfig\RT\RT_settings.sqf` (or root `userconfig\RT\RT_settings.sqf`)
+- Optional CBA settings/keybind and Zeus module included.
+
+
+## Signing (Optional but recommended)
+### Windows
+- Run `make_pbo.bat`. If `keys\RecoveryTeam.biprivatekey` is missing, the script will create it using `DSCreateKey.exe`, sign the PBO with `DSSignFile.exe`, and copy the `.bikey` to `@RecoveryTeam\keys\`.
+
+### Linux (Wine)
+- Run `./make_pbo.sh`. Set env vars if your paths differ:
+  ```bash
+  WINE_BIN=wine TOOLS_DIR="$HOME/.local/share/Steam/steamapps/common/Arma 3 Tools" ./make_pbo.sh
+  ```
+- The script builds via AddonBuilder, creates a key if missing, signs via DSSignFile, and copies the `.bikey` into `@RecoveryTeam/keys/`.
+
+> Keep your **.biprivatekey** secret. Distribute only the `.bikey` with your mod.
+
+
+## HEMTT Build (cross‑platform)
+1) Install HEMTT: https://hemtt.dev (or `cargo install hemtt`)
+2) From this folder, run:
+   ```bash
+   hemtt build       # builds PBOs into .hemttout
+   hemtt release     # creates a ready‑to‑use @RecoveryTeam in ./dist (and signs if keys present)
+   ```
+3) For signing: put your private key at `keys/RecoveryTeam.biprivatekey` before `hemtt release`.
+4) The public key (`.bikey`) will be emitted into `@RecoveryTeam/keys/` inside the release.
+
+Notes:
+- Source for the PBO is under `addons/rt_core/` (mirrors the copy in `@RecoveryTeam/addons/rt_core`). 
+- `userconfig/RT/RT_settings.sqf` is included in the release.
